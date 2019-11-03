@@ -49,3 +49,19 @@ resource "aws_security_group" "alb" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
+
+resource "aws_security_group" "db" {
+  name = "sample-db"
+  description = "database"
+  vpc_id = data.terraform_remote_state.vpc.vpc_id
+
+  ingress {
+    from_port = 3306
+    to_port = 3306
+    protocol = "TCP"
+
+    security_groups = [
+      aws_security_group.instance.id,
+    ]
+  }
+}
