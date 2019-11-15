@@ -35,7 +35,7 @@
 				"valueFrom": "DB_PASSWORD"
 			},
 			{
-				"name: "RACK_ENV",
+				"name": "RACK_ENV",
 				"valueFrom": "RACK_ENV"
 			}
 		]
