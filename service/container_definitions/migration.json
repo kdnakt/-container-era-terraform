@@ -1,7 +1,7 @@
 [
 	{
 		"name": "sample-webapp",
-		"image": "",
+		"image": "195905244530.dkr.ecr.ap-northeast-1.amazonaws.com/sample-image:latest",
 		"cpu": 200,
 		"memory": null,
 		"memoryReservation": 600,
